@@ -1,0 +1,26 @@
+{
+  "name": "shoes-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc && npm run build-sass",
+    "build-sass": "node-sass styles/scss/ -o styles/css/",
+    "watch-sass": "node-sass -w styles/scss/ -o styles/css/",
+    "serve": "npm run build && concurrently \"tsc -w\" \"npm run watch-sass\" lite-server",
+    "postinstall": "typings install"
+  },
+  "dependencies": {
+    "systemjs": "0.19.27",
+    "bootstrap": "3.3.6",
+    "dc": "^2.0.0-beta.30",
+    "es6-shim": "0.35.0",
+    "jquery": "2.2.0",
+    "ractive": "^0.7.3"
+  },
+  "devDependencies": {
+    "concurrently": "2.0.0",
+    "lite-server": "2.2.0",
+    "node-sass": "^3.8.0",
+    "typescript": "1.8.10",
+    "typings": "0.8.1"
+  }
+}

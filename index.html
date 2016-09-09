@@ -1,0 +1,31 @@
+<html>
+  <head>    
+    <title>Shoes app</title>    
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">  
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="node_modules/dc/dc.min.css"/>
+    <link rel="stylesheet" href="styles/css/main.css"/>
+    
+    <!-- dcjs (not working imports with system.js) -->
+    <script src="/node_modules/dc/node_modules/crossfilter2/crossfilter.js"></script>
+    <script src="/node_modules/dc/node_modules/d3/d3.min.js"></script>
+    <script src="/node_modules/dc/dc.js"></script>
+    <!-- JQuery -->  
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- App -->
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app');
+    </script>
+  </head>
+  <body>
+    
+    <div id="app">Loading...</div>
+
+  </body>
+</html>

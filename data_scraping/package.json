@@ -1,0 +1,15 @@
+{
+  "name": "data_scraping",
+  "version": "1.0.0",
+  "description": "get data from nike web",
+  "main": "main.js",
+  "dependencies": {
+    "request": "^2.74.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ruben Valseca",
+  "license": "ISC"
+}

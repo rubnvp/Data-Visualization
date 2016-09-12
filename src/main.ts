@@ -1,1 +1,4 @@
-console.log('hello world :)');
+import { AppComponent } from './app.component';
+
+const app = AppComponent();
+app.init();

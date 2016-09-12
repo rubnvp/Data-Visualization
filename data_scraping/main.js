@@ -26,12 +26,16 @@ function requestPage(page){
             var jsonBody = JSON.parse(body); 
             var products = jsonBody && jsonBody.sections && jsonBody.sections[0] && jsonBody.sections[0].products;
 
-            if (products && products.length === productsPerPage) { // response is full, probably there are more products
-                totalProducts = totalProducts.concat( products.map(processProduct) );
-                requestPage(page+1); // quit during develop
-                // saveProducts(totalProducts); // add during develop
+            if (products instanceof Array) {
+                totalProducts = totalProducts.concat( products.map(processProduct) ); // concat new products
+                if (products.length === productsPerPage) { // response is full, probably there are more products
+                    requestPage(page+1);
+                }
+                else {
+                    saveProducts(totalProducts);
+                }
             }
-            else {  // response isn't full, should finish petitions
+            else {
                 saveProducts(totalProducts);
             }
         }    

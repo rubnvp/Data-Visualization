@@ -17,15 +17,76 @@
     <!-- Bootstrap -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- App -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="systemjs.config.js"></script>
     <script>
       System.import('app');
     </script>
   </head>
-  <body>
-    
-    <div id="app">Loading...</div>
 
-  </body>
+  <body>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Shoes app</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Graphs</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div id="data-count" class="col-xs-12 dc-data-count dc-chart">
+          <h2>Products</h2>
+          <small>
+            selected <span class="filter-count"></span> out of <span class="total-count"></span> products | <a id="reset-filters" href="#">Reset filters</a>
+          </small>          
+      </div>
+      
+      <div class="row">
+          <div class="col-md-9">
+              <!-- Shoes price -->
+              <div id="chart-shoes-price" class="dc-chart"></div>
+              <!-- Shoes rating -->
+              <div id="chart-shoes-rating" class="dc-chart"></div>
+          </div>
+          <div class="col-md-3">
+                <h4 class="text-left">In stock</h4>
+                <div id="chart-shoes-stock" class="dc-chart"></div>
+            </div>             
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+
+            <table id="data-table" class="table table-bordered table-striped">
+                <thead>
+                  <tr class="header">
+                      <th>Title</th>
+                      <th>Subtitle</th>
+                      <th>Rating</th>
+                      <th>Price <span class="caret"></span></th>
+                  </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    </div>
+
+  </body>    
+
 </html>

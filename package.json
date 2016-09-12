@@ -9,12 +9,13 @@
     "postinstall": "typings install"
   },
   "dependencies": {
-    "systemjs": "0.19.27",
+    "angular": "^1.5.8",
     "bootstrap": "3.3.6",
     "dc": "^2.0.0-beta.30",
     "es6-shim": "0.35.0",
     "jquery": "2.2.0",
-    "ractive": "^0.7.3"
+    "ractive": "^0.7.3",
+    "systemjs": "0.19.27"
   },
   "devDependencies": {
     "concurrently": "2.0.0",

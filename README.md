@@ -5,7 +5,7 @@ Interactive Data Visualization for men's shoes in [nike Spain](http://store.nike
 ```
 cd ./data_scraping
 npm install
-node ./data_scraping/main.js
+node main.js
 ```
 this will update ./data_scraping/products.json
 
